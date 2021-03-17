@@ -37,7 +37,7 @@ model_path = get_file("gender_detection.model", dwnld_link,
         images_of_person = os.listdir(os.path.join(images_root, name))
 	
 	# read input image
-	image = cv2.imread(args.image)
+	image = cv2.imread(image_path)
 
 	if image is None:
 	    print("Could not read input image")
