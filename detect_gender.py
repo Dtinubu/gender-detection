@@ -32,14 +32,9 @@ names = os.listdir(images_root)
 if len(names) == 0:
 	raise RuntimeError('Empty dataset')
 for klass, name in enumerate(names):
-          def add_class(image):
-            image_path = os.path.join(images_root, name, image)
-            return (image_path, klass, name)
+          image_path = os.path.join(images_root, name, image)
           images_of_person = os.listdir(os.path.join(images_root, name))
-          total = len(images_of_person)
-          whole_set += map(
-                    add_class,
-                    images_of_person)
+         
 	# read input image
 	  image = cv2.imread(image_path)
 
