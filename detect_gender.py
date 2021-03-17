@@ -26,11 +26,12 @@ args = ap.parse_args()
 dwnld_link = "https://github.com/arunponnusamy/cvlib/releases/download/v0.2.0/gender_detection.model"
 model_path = get_file("gender_detection.model", dwnld_link,
                      cache_subdir="pre-trained", cache_dir=os.getcwd())
-
+f= open(args.text_file".txt","w+")
  images_root = os.path.join('/cmlscratch','dtinubu','datasets','RFW','Balancedface','race_per_7000', race)
     names = os.listdir(images_root)
     if len(names) == 0:
         raise RuntimeError('Empty dataset')
+
 
      for klass, name in enumerate(names):
 	image_path = os.path.join(images_root, name, image)
@@ -86,6 +87,7 @@ model_path = get_file("gender_detection.model", dwnld_link,
 	    # write label and confidence above face rectangle
 	    cv2.putText(image, label, (startX, Y),  cv2.FONT_HERSHEY_SIMPLEX,
 			0.7, (0, 255, 0), 2)
+	    f.write(label + "," + name + "," + image_path )
 		
 	
 	
@@ -96,6 +98,7 @@ model_path = get_file("gender_detection.model", dwnld_link,
 
 	# save output
 	cv2.imwrite("gender_detection.jpg", image)
+	
 
 # release resources
 cv2.destroyAllWindows()
