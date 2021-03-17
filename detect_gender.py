@@ -29,11 +29,9 @@ model_path = get_file("gender_detection.model", dwnld_link,
 f = open(args.text_file+".txt","w+")
 images_root = os.path.join('/cmlscratch','dtinubu','datasets','RFW','Balancedface','race_per_7000', race)
 names = os.listdir(images_root)
-    if len(names) == 0:
-        raise RuntimeError('Empty dataset')
-
-
-     for klass, name in enumerate(names):
+if len(names) == 0:
+	raise RuntimeError('Empty dataset')
+for klass, name in enumerate(names):
 	image_path = os.path.join(images_root, name, image)
         images_of_person = os.listdir(os.path.join(images_root, name))
 	
