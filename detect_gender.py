@@ -57,9 +57,9 @@ for klass, name in enumerate(names):
 
 			    # preprocessing for gender detection model
                        face_crop = cv2.resize(face_crop, (96,96))
-		       face_crop = face_crop.astype("float") / 255.0
-		       face_crop = img_to_array(face_crop)
-		       face_crop = np.expand_dims(face_crop, axis=0)
+                       face_crop = face_crop.astype("float") / 255.0
+                       face_crop = img_to_array(face_crop)
+                       face_crop = np.expand_dims(face_crop, axis=0)
 
 			    # apply gender detection on face
 		       conf = model.predict(face_crop)[0]
