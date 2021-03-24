@@ -48,7 +48,7 @@ for klass, name in enumerate(names):
 	            # loop through detected faces
 		    for idx, f in enumerate(face):
 
-	            # get corner points of face rectangle       
+	            # get corner points of face rectangle
 		    (startX, startY) = f[0], f[1]
 		    (endX, endY) = f[2], f[3]
 
