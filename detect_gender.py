@@ -45,13 +45,13 @@ for klass, name in enumerate(names):
                     classes = ['man','woman']
 	            # loop through detected faces
                     for idx, f in enumerate(face):
-                         (startX, startY) = f[0], f[1]
-                         (endX, endY) = f[2], f[3]
+                        (startX, startY) = f[0], f[1]
+			(endX, endY) = f[2], f[3]
 		     # draw rectangle over face
-                         cv2.rectangle(image, (startX,startY), (endX,endY), (0,255,0), 2)
+                        cv2.rectangle(image, (startX,startY), (endX,endY), (0,255,0), 2)
 
 			    # crop the detected face region
-                         face_crop = np.copy(image[startY:endY,startX:endX])
+                        face_crop = np.copy(image[startY:endY,startX:endX])
 
 			    # preprocessing for gender detection model
                          face_crop = cv2.resize(face_crop, (96,96))
