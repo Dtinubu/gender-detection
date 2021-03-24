@@ -24,7 +24,6 @@ args = ap.parse_args()
 dwnld_link = "https://github.com/arunponnusamy/cvlib/releases/download/v0.2.0/gender_detection.model"
 model_path = get_file("gender_detection.model", dwnld_link,
                      cache_subdir="pre-trained", cache_dir=os.getcwd())
-f = open(args.text_file+".txt","w+")
 images_root = os.path.join('/cmlscratch','dtinubu','datasets','RFW','Balancedface','race_per_7000', args.race)
 names = os.listdir(images_root)
 for klass, name in enumerate(names):
@@ -70,8 +69,10 @@ for klass, name in enumerate(names):
                         label = "{}: {:.2f}%".format(label, conf[idx] * 100)
                         Y = startY - 10 if startY - 10 > 10 else startY + 10
 			     # write label and confidence above face rectangle
-                        f.write(label + "," + name + "," + image_path )
+                        f = open(args.text_file+".txt","w+")
+			f.write(label + "," + name + "," + image_path )
                         print(label + "," + name + "," + image_path )
+			f.close()
 
 
 # press any key to close window
