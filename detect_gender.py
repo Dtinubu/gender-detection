@@ -29,7 +29,7 @@ images_root = os.path.join('/cmlscratch','dtinubu','datasets','RFW','Balancedfac
 names = os.listdir(images_root)
 for klass, name in enumerate(names):
 		  image_path = os.path.join(images_root, name)
-		  images_of_person = os.listdir(os.path.join(images_root, name))
+		  images_of_person = os.listdir[os.path.join(images_root, name)]
 		  for  spname in zip(images_of_person):
 		    path =  os.path.join(images_root, name, spname)
 		    # read input image
