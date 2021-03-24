@@ -53,7 +53,7 @@ for klass, name in enumerate(names):
                        cv2.rectangle(image, (startX,startY), (endX,endY), (0,255,0), 2)
 
 			    # crop the detected face region
-		       face_crop = np.copy(image[startY:endY,startX:endX])
+                       face_crop = np.copy(image[startY:endY,startX:endX])
 
 			    # preprocessing for gender detection model
                        face_crop = cv2.resize(face_crop, (96,96))
