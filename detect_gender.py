@@ -44,10 +44,8 @@ for klass, name in enumerate(names):
 			# detect faces in the image
 		    face, confidence = cv.detect_face(image)
 		    classes = ['man','woman']
-
 	            # loop through detected faces
 		    for idx, f in enumerate(face):
-
 	            # get corner points of face rectangle
 		    (startX, startY) = f[0], f[1]
 		    (endX, endY) = f[2], f[3]
