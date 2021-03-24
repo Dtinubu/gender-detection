@@ -39,10 +39,9 @@ for klass, name in enumerate(names):
                       exit()
 			
 		    # load pre-trained model
-		    model = load_model(model_path)
-
+                    model = load_model(model_path)
 			# detect faces in the image
-		    face, confidence = cv.detect_face(image)
+                    face, confidence = cv.detect_face(image)
 		    classes = ['man','woman']
 	            # loop through detected faces
 		    for idx, f in enumerate(face):
