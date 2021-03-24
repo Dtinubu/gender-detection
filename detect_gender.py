@@ -42,12 +42,11 @@ for klass, name in enumerate(names):
                     model = load_model(model_path)
 			# detect faces in the image
                     face, confidence = cv.detect_face(image)
-		    classes = ['man','woman']
+                    classes = ['man','woman']
 	            # loop through detected faces
-		    for idx, f in enumerate(face):
-				
+                    for idx, f in enumerate(face):	
                        (startX, startY) = f[0], f[1]
-                       (endX, endY) = f[2], f[3]
+		       (endX, endY) = f[2], f[3]
 		     # draw rectangle over face
                        cv2.rectangle(image, (startX,startY), (endX,endY), (0,255,0), 2)
 
