@@ -36,7 +36,7 @@ for klass, name in enumerate(names):
 		  image = cv2.imread(image_path)
 		  if image is None:
 		    print("Could not read input image")
-			exit()
+		  exit()
 
 		# load pre-trained model
 		  model = load_model(model_path)
