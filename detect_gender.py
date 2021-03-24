@@ -30,8 +30,7 @@ names = os.listdir(images_root)
 for klass, name in enumerate(names):
 		  image_path = os.path.join(images_root, name)
 		  images_of_person = os.listdir(os.path.join(images_root, name))
-		  ##for  spname in zip(images_of_person):
-               for i in range len(images_of_person):
+		  for  i in range len(images_of_person):
                     path =  os.path.join(images_root, name, images_of_person[i])
 		    # read input image
 		    image = cv2.imread(image_path)
