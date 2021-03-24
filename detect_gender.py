@@ -33,18 +33,16 @@ for klass, name in enumerate(names):
 		  for  name in zip(images_of_person):
 		    path = (image_path + name)
 		    # read input image
-			  image = cv2.imread(image_path)
-			  if image is None:
-			    print("Could not read input image")
-			  exit()
-
-			# load pre-trained model
-			  model = load_model(model_path)
+		    image = cv2.imread(image_path)
+	            if image is None:
+		    	print("Could not read input image")
+		    	exit()
+		    # load pre-trained model
+		    model = load_model(model_path)
 
 			# detect faces in the image
-			  face, confidence = cv.detect_face(image)
-
-			  classes = ['man','woman']
+		    face, confidence = cv.detect_face(image)
+		    classes = ['man','woman']
 
 			# loop through detected faces
 			  for idx, f in enumerate(face):
