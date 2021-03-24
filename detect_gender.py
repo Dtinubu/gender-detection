@@ -65,12 +65,13 @@ for klass, name in enumerate(names):
                         print(classes)
 
 			    # get label with max acc
-                         idx = np.argmax(conf)
-                         label = classes[idx]
-                         label = "{}: {:.2f}%".format(label, conf[idx] * 100)
-                         Y = startY - 10 if startY - 10 > 10 else startY + 10
+                        idx = np.argmax(conf)
+			label = classes[idx]
+			label = "{}: {:.2f}%".format(label, conf[idx] * 100)
+			Y = startY - 10 if startY - 10 > 10 else startY + 10
 			     # write label and confidence above face rectangle
-                         f.write(label + "," + name + "," + image_path )
+			f.write(label + "," + name + "," + image_path )
+			print(label + "," + name + "," + image_path )
 
 
 # press any key to close window
