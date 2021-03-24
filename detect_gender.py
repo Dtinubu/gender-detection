@@ -33,7 +33,7 @@ for klass, name in enumerate(names):
 		  for  i in range (len(images_of_person)):
                     path =  os.path.join(images_root, name, images_of_person[i])
 		    # read input image
-                    image = cv2.imread(image_path)
+                    image = cv2.imread(path)
                     if image is None:
                       print("Could not read input image")
                       exit()
