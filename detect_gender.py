@@ -34,7 +34,7 @@ for klass, name in enumerate(names):
                     path =  os.path.join(images_root, name, images_of_person[i])
 		    # read input image
                     image = cv2.imread(image_path)
-		    if image is None:
+                    if image is None:
 		      print("Could not read input image")
 		      exit()
 			
