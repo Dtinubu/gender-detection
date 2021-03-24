@@ -69,7 +69,7 @@ for klass, name in enumerate(names):
                         label = "{}: {:.2f}%".format(label, conf[idx] * 100)
                         Y = startY - 10 if startY - 10 > 10 else startY + 10
 			     # write label and confidence above face rectangle
-                        f = open(args.text_file+".txt","w+")
+                        f = open(args.text_file+".txt","a")
                         f.write(label + "," + name + "," + image_path)
                         print(label + "," + name + "," + image_path )
                         f.close()
