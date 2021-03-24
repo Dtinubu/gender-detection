@@ -82,12 +82,11 @@ for klass, name in enumerate(names):
 		     f.write(label + "," + name + "," + image_path )
 
 
-	# press any key to close window           
-	cv2.waitKey()
+		     # press any key to close window
+                     cv2.waitKey()
+		     # save output
+		     cv2.imwrite("gender_detection.jpg", image)
 
-	# save output
-	cv2.imwrite("gender_detection.jpg", image)
-	
 
 # release resources
 cv2.destroyAllWindows()
