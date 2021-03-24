@@ -28,7 +28,7 @@ f = open(args.text_file+".txt","w+")
 images_root = os.path.join('/cmlscratch','dtinubu','datasets','RFW','Balancedface','race_per_7000', args.race)
 names = os.listdir(images_root)
 for klass, name in enumerate(names):
-		  image_path = os.path.join(images_root, name, ex)
+		  image_path = os.path.join(images_root, name)
 		  images_of_person = os.listdir(os.path.join(images_root, name))
 		# read input image
 		  image = cv2.imread(image_path)
