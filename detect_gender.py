@@ -13,8 +13,6 @@ import cvlib as cv
 
 # handle command line arguments
 ap = argparse.ArgumentParser()
-ap.add_argument("-i", "--image", required=True,
-	help="path to input image")
 ap.add_argument("-t", "--text_file", required=True,
 	help="path to input image")
 ap.add_argument("-r", "--race", required=True,
