@@ -51,8 +51,7 @@ for klass, name in enumerate(names):
 	            # get corner points of face rectangle
 		    (startX, startY) = f[0], f[1]
 		    (endX, endY) = f[2], f[3]
-
-			    # draw rectangle over face
+		     # draw rectangle over face
 			     cv2.rectangle(image, (startX,startY), (endX,endY), (0,255,0), 2)
 
 			    # crop the detected face region
