@@ -25,7 +25,7 @@ dwnld_link = "https://github.com/arunponnusamy/cvlib/releases/download/v0.2.0/ge
 model_path = get_file("gender_detection.model", dwnld_link,
                      cache_subdir="pre-trained", cache_dir=os.getcwd())
 f = open(args.text_file+".txt","w+")
-images_root = os.path.join('/cmlscratch','dtinubu','datasets','RFW','Balancedface','race_per_7000', ap.race)
+images_root = os.path.join('/cmlscratch','dtinubu','datasets','RFW','Balancedface','race_per_7000', ap.r)
 names = os.listdir(images_root)
 for klass, name in enumerate(names):
 		  image_path = os.path.join(images_root, name, ex)
