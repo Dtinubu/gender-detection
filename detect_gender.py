@@ -36,20 +36,12 @@ for klass, name in enumerate(names):
                     if image is None:
                       print("Could not read input image")
                       exit()
-			
-		     faces, confidences = cv.detect_face(image) 
-		     label, confidence = cv.detect_gender(face)
-		
-			    # get label with max acc
-                        idx = np.argmax(conf)
-                        label = classes[idx]
-                        label = "{}: {:.2f}%".format(label, conf[idx] * 100)
-                        Y = startY - 10 if startY - 10 > 10 else startY + 10
-			     # write label and confidence above face rectangle
-                        f = open(args.text_file+".txt","a")
-                        f.write(label + "," + name + "," + path + "\n")
-                        print(label + "," + name + "," + path + "\n")
-                        f.close()
+		      faces, confidences = cv.detect_face(image) 
+		      label, confidence = cv.detect_gender(face)
+                       f = open(args.text_file+".txt","a")
+                       f.write(label + "," + name + "," + path + "\n")
+                       print(label + "," + name + "," + path + "\n")
+                       f.close()
 
 
 # press any key to close window
