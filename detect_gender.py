@@ -43,7 +43,7 @@ for klass, name in enumerate(names):
                     f = open(args.text_file+".txt","a")
                     f.write(label + "," + name + "," + path + "\n")
                     f.close()
-		    print(label + "," + name + "," + path + "\n")
+                    print(label + "," + name + "," + path + "\n")
 	
 # press any key to close window
 cv2.waitKey()
