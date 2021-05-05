@@ -45,8 +45,6 @@ for klass, name in enumerate(names):
                     f.close()
 		    print(label + "," + name + "," + path + "\n")
 	
-
-
 # press any key to close window
 cv2.waitKey()
 # save output
