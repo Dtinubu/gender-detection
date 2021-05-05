@@ -31,8 +31,8 @@ for klass, name in enumerate(names):
 		  images_of_person = os.listdir(os.path.join(images_root, name))
 		  for  i in range (len(images_of_person)):
                     path =  os.path.join(images_root, name, images_of_person[i])
-                  man = 0
-                  woman = 0
+                    man = 0
+                    woman = 0
 		    # read input image
                     image = cv2.imread(path)
                     if image is None:
